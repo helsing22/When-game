@@ -1,6 +1,11 @@
 Exponga sus ideas:
 
-• Escriba su nombre seguido de ":" y luego a aspecto del jurgse refiere
+
+•Crea un txt llamado por tu nombre y luego Idea #x
+ejemplo: Hels idea#1
+
+
+• dentro del txt escriba su nombre seguido de ":" y luego a aspecto del juego se refiere
 ejemplo: Hels: Mecánica {idea}
 
 
