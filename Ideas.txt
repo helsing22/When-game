@@ -9,3 +9,4 @@ ejemplo: Hels idea#1
 ejemplo: Hels: Mecánica {idea}
 
 
+•Las ideas serán modificadas en el propio archivo y respondidas Para ver si se añaden o no pronto haremos esto con Github déjenme aprender a usarlo 
