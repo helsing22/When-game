@@ -14,10 +14,13 @@
 >>> - Hellsing
 >>> - William
 >>> - Mayko2
+
 >> **Guinistas**
 >>> - Dozarou
+
 >> **Arte**
 >>> - William (Apoyo; Rol terciario)
+
 >> **Sonido**
 >>> - None
 
