@@ -11,18 +11,18 @@
 #### **Personal total** : 3
  #### **Distribuido en**
   1. **Programadores**
-    - Hellsing
-    - William
-    - Mayko2
+     * Hellsing
+     * William
+     * Mayko2
 
   2. **Guionistas**
-    - Dozarou
+     * Dozarou
 
   3. **Arte**
-    - William (Apoyo; Rol terciario)
+     * William (Apoyo; Rol terciario)
 
   4. **Sonido**
-    - None
+     * None
 
 #### **Enlaces**
 [GDD del proyecto](https://github.com/helsing22/When-game/blob/main/GDD)
