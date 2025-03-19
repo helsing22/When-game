@@ -1,22 +1,31 @@
-Este GDD es provisional está hecho con IA es para que tengan una idea mientras el GDD como dios manda esta en desarrollo.
+WHEN
+
+
+
+ When es un juego en 2D pixelado, de horror y supervivencia, diseñado para sumergir a los jugadores en un ambiente aterrador y oscuro donde sus vidas corren un  grave peligro.
+
+PLATAFORMA: Diseñado pricipalmente para PC.
 
 ---
 
-### **Game Design Document: When
-#### **Género**
-Survival horror en 2D, con mecánicas de plataformas.
+OBJETIVO: Tenemos como principal que sientan la adrenalina y la necesidad de querer sobrevir ante mutantes y que utilicen el sigilo como su principal arma ya que tendran un arma pero será un camino complicado por el ruido que provoca buscando que al usarla en una zona peligrosa mueras 
 
 ---
 
-### **Resumen del Juego**
-Un título oscuro y emocionalmente cargado, donde el jugador explora un mundo lleno de desesperación y misterio acompañado de un fiel compañero. La narrativa sigue a un personaje que enfrenta sus miedos internos y un entorno hostil mientras intenta desentrañar los secretos de un lugar lleno de horrores, sin un objetivo claro desde el principio.
+TRAMA: La radiación liberada por un experimento científico fallido convirtió agran parte de las ciudades en un infierno viviente. Zombies invaden las calles, mutantes deformes asechan desde las sombres, más rápidos, letales y despiadados que en cualquier pesadilla antes soñada (tipo dying light) . El jugador en un mundo q ya no es solo humano deben sobrevivir enfrentándose al horror con armas de fuego u algunas otras herramientas al azar. Cada rincón es una trampa, cada sonido una advertencia de muerte y cada paso podría ser el último.
 
 ---
 
-### **Trama**
-El protagonista, junto con su compañero (un animal simbólico, un robot viejo o un niño perdido, según el enfoque que desees), se encuentra atrapado en un antiguo orfanato abandonado. Ambos tienen una conexión desconocida y trabajan juntos para sobrevivir mientras desvelan el oscuro pasado del lugar. El compañero no solo sirve como apoyo emocional, sino también como una herramienta clave para superar desafíos. 
-
-El objetivo final se mantiene intencionadamente ambiguo para añadir tensión narrativa y abrir múltiples posibilidades de descubrimiento según el desarrollo de la historia.
+MECANICAS:
+1. **Movimiento:** Plataformas en 2D con habilidades básicas como caminar, saltar y agacharse y rodar. Algunas acciones solo pueden completarse en cooperación con el compañero.
+2. **Gestión de Recursos:** Inventario limitado para ítems clave, compartido con el compañero en ciertos casos.
+3. **Interacciones con el Compañero:**
+   - El compañero puede ayudar a desbloquear áreas inaccesibles, distraer enemigos o resolver puzzles específicos. (ayudarte a subir una cuesta, llevar un objeto a un punto especifico, hacer de sñuelo)
+   - La relación entre el protagonista y el compañero afecta el comportamiento del segundo (opcional: sistema de afinidad).
+4. **Enemigos y Estrategia:** Los enemigos sobrenaturales deben ser evadidos o atacados directamente (esta ultima opcion es peligrosa ya que de pocos golpes acaban contigo). El compañero también es vulnerable y puede alertar enemigos si no se maneja adecuadamente.
+5. Las balas son recurso muy preciado (estilo The Walcking dead o resident evil)
+6. **Resolución de Puzzles:** Muchos acertijos requieren utilizar las habilidades complementarias del protagonista y su compañero.
+7. **Narrativa Ambiental:** Las notas, audios y entornos dan pistas sobre el propósito de la conexión entre el protagonista y su compañero.
 
 ---
 
@@ -26,22 +35,10 @@ El objetivo final se mantiene intencionadamente ambiguo para añadir tensión na
 - **Estilo de Personaje:** Ambos personajes tienen diseños distintivos pero coherentes dentro del estilo general del juego.
 
 ---
-
-### **Mecánicas de Juego**
-1. **Movimiento:** Plataformas en 2D con habilidades básicas como caminar, saltar y agacharse. Algunas acciones solo pueden completarse en cooperación con el compañero.
-2. **Gestión de Recursos:** Inventario limitado para ítems clave, compartido con el compañero en ciertos casos.
-3. **Interacciones con el Compañero:**
-   - El compañero puede ayudar a desbloquear áreas inaccesibles, distraer enemigos o resolver puzzles específicos.
-   - La relación entre el protagonista y el compañero afecta el comportamiento del segundo (opcional: sistema de afinidad).
-4. **Enemigos y Estrategia:** Los enemigos sobrenaturales deben ser evadidos. El compañero también es vulnerable y puede alertar enemigos si no se maneja adecuadamente.
-5. **Resolución de Puzzles:** Muchos acertijos requieren utilizar las habilidades complementarias del protagonista y su compañero.
-6. **Narrativa Ambiental:** Las notas, audios y entornos dan pistas sobre el propósito de la conexión entre el protagonista y su compañero.
-
----
-
-### **Sistema de Progresión**
+ 
+**Sistema de Progresión**
 - **Capítulos:** Cada área del orfanato explora fragmentos del pasado del protagonista y también desarrolla la relación con el compañero.
-- **Nuevas Mecánicas:** A medida que avanzan, se introducen habilidades o herramientas para el protagonista y su compañero, mejorando la cooperación.
+- **Nuevas Mecánicas:** A medida que avanzan, se introducen habilidades o herramientas para el protagonista y su compañero, mejorando la cooperación (gancho de escalada, llevar a tu compañero a cuestas si es muy dañado, que el te saque a cuestas si te dejan tirado en el piso)
 
 ---
 
@@ -52,11 +49,9 @@ El objetivo final se mantiene intencionadamente ambiguo para añadir tensión na
 ---
 
 ### **Objetivo Final**
-Inicialmente, el objetivo del juego no está claro. Solo a través de la exploración y los descubrimientos, tanto el protagonista como el jugador comienzan a comprender lo que realmente necesitan para avanzar, ya sea escapar, enfrentar la verdad o salvarse mutuamente.
+Inicialmente, el objetivo del juego no está claro. Solo a través de la exploración y los descubrimientos, tanto el protagonista como el jugador comienzan a comprender lo que realmente necesitan para avanzar, ya sea escapar, enfrentar la verdad o salvarse mutuamente. (objetivo final de el protagonista lo define el Guionista)
 
 ---
-
-Tengan en cuenta que está hecho por IA pronto subiré la versión buena 
 
 Equipo actual:
 
@@ -71,3 +66,4 @@ Guión: 1
 Arte: 0
 
 Sonido: 0
+
