@@ -30,7 +30,7 @@
 
 #### **Enlaces**
 [Main Game del proyecto](https://github.com/helsing22/When-game/tree/main/When-Main)
-[GDD del proyecto](https://github.com/helsing22/When-game/blob/main/GDD)
+[GDD del proyecto](https://github.com/helsing22/When-game/blob/main/GDDs)
 
 
 
