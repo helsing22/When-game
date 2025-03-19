@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcw8qjhgulmqt"]
+
+[ext_resource type="Script" uid="uid://c5b4ggmae7h6t" path="res://Prefabs/PlayerCharacter_Prefab/Components/InputDetection_Component/Scripts/InputDetection_Script.gd" id="1_qq7pw"]
+
+[node name="InputDetection_Main" type="Node"]
+script = ExtResource("1_qq7pw")
