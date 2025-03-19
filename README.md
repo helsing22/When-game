@@ -62,9 +62,10 @@ Tengan en cuenta que está hecho por IA pronto subiré la versión buena
 
 Equipo actual:
 
-Desarrolladores: 2
+Desarrolladores: 3
  Hels
  Mayko2
+ William
  
 Guión: 1
  Dozarou
