@@ -15,7 +15,7 @@
 >>> - William
 >>> - Mayko2
 
->> **Guinistas**
+>> **Guionistas**
 >>> - Dozarou
 
 >> **Arte**
