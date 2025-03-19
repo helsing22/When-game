@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Ledge Grab Tutorial"
+run/main_scene="uid://n055c6m7kbre"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
