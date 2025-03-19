@@ -9,7 +9,7 @@
  - Dozarou
  - Dian
 
-#### **Personal total** : 3
+#### **Personal total** : 4
  #### **Distribuido en**
   1. **Programadores**
     * Helsing
