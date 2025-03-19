@@ -9,20 +9,20 @@
  - Dozarou
 
 #### **Personal total** : 3
-    #### **Distribuido en**
-        1. **Programadores**
-            - Hellsing
-            - William
-            - Mayko2
+ #### **Distribuido en**
+  1. **Programadores**
+    - Hellsing
+    - William
+    - Mayko2
 
-        2. **Guionistas**
-            - Dozarou
+  2. **Guionistas**
+    - Dozarou
 
-        3. **Arte**
-            - William (Apoyo; Rol terciario)
+  3. **Arte**
+    - William (Apoyo; Rol terciario)
 
-        4. **Sonido**
-            - None
+  4. **Sonido**
+    - None
 
 #### **Enlaces**
 [GDD del proyecto](https://github.com/helsing22/When-game/blob/main/GDD)
