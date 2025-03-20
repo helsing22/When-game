@@ -32,27 +32,22 @@ func get_vertical() -> float:
 	# Manages gravity, coyote time and ceiling collisions
 	if targetEntity == null:
 		return 0
-	
-	if (targetEntity.is_on_floor() || !canFall) && Input.is_action_just_pressed("ui_up"):
-		canFall = false ; movementVector.y -= jumpValue
-		return  movementVector.y
 		
-	elif targetEntity.is_on_floor() :
-		canFall = false ; movementVector.y = 0
-		return movementVector.y
-	
-	if Input.is_action_just_released("ui_up") && targetEntity.velocity.y < 0 :
-		canFall = true ; movementVector.y /= jumpValue
-		return movementVector.y
+	if targetEntity.is_on_floor():
+		canFall = false; movementVector.y = 0
 		
+	if (targetEntity.is_on_floor() || !canFall) && Input.is_action_pressed("ui_up"):
+		canFall = true; movementVector.y -= jumpValue
 	
-	if !targetEntity.is_on_floor() :
+	elif !targetEntity.is_on_floor() :
 		if targetEntity.is_on_ceiling() : movementVector.y = gravityValue; movementVector.y += gravityValue
 		if canFall : movementVector.y += gravityValue
 		elif !canFall : get_tree().create_timer(coyoteValue).timeout.connect(func lambda() : canFall = true)
-		return movementVector.y
 	
-	return 0
+	if Input.is_action_just_released("ui_up") && targetEntity.velocity.y < 0 :
+		canFall = true; movementVector.y /= jumpValue
+		
+	return movementVector.y
 	
 func get_axis() -> Vector2: 
 	# returns whole axis as a vector2D

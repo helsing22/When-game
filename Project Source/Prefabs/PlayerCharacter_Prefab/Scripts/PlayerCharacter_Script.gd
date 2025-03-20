@@ -6,8 +6,8 @@ class_name PlayerCharacter_Prefab
 @export_group("Settings")
 @export var deltaMultiplier : float = 100.0
 
-@export var movementSpeed : float = 75.0
-@export var jumpForce : float = 200.0
+@export var movementSpeed : float = 150.0
+@export var jumpForce : float = 300.0
 @export var gravityValue : float = 9.80
 @export_range(0.0, 5.0) var coyoteTime : float = 0.3
 
@@ -37,7 +37,6 @@ func _physics_process(delta : float) -> void:
 	if PlayerCharacter_Sprite != null && inputDetection_Component.get_horizontal() != 0:
 		PlayerCharacter_Sprite.flip_h = inputDetection_Component.get_horizontal() < 0
 		
-	
 	velocity.x = lerp(
 		velocity.x,
 		inputDetection_Component.get_horizontal() * (delta * deltaMultiplier),

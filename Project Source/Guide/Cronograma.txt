@@ -26,5 +26,13 @@ Second edit: "Furokawa" {
 	I made the character controller system also state machine and stmm and in top of that i made a debug
 	scene that u can use, enjoy folks
 	
+	Further Documentation :
+	The rootNode Scene is the main scene where we can build all the game with root as the father
+	then add nodes like worldNode, UINode, soundNode, etc
+	making that way a node herarchy, worldNode contains the level and the player (per separate) and the level 
+	contains objects, enemies, etc
+	then on worldNode (the father) we can put functions like swaping levels, or things like that, meanwhile
+	in rootNode we can add functions like pause() or things like that, like a game manager
+	
 	-With love Furokawa
 }

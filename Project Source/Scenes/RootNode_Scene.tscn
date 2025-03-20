@@ -11,6 +11,7 @@ size = Vector2(130, 130)
 [node name="WorldNode_Main" type="Node" parent="."]
 
 [node name="PlayerCharacter_Main" parent="WorldNode_Main" instance=ExtResource("1_n7ce1")]
+movementSpeed = 150.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="WorldNode_Main"]
 position = Vector2(0, 230)

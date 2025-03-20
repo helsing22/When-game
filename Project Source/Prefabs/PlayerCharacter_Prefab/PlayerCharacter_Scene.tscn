@@ -140,7 +140,6 @@ _data = {
 
 [node name="PlayerCharacter_Main" type="CharacterBody2D" node_paths=PackedStringArray("PlayerCharacter_Sprite", "inputDetection_Component", "stateManager_Component")]
 script = ExtResource("1_1gwrj")
-movementSpeed = 125.0
 airResistance = 1.0
 PlayerCharacter_Sprite = NodePath("PlayerCharacter_Sprite")
 inputDetection_Component = NodePath("InputDetection_Component")
