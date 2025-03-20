@@ -15,8 +15,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 enum states {
 	IDLE,
-	WALCK,
 	RUN,
+	WALCK,
 	JUMP,
 	FALL,
 	LEDGE_GRAB,
@@ -28,8 +28,8 @@ enum states {
 
 const state_names := [
 	"IDLE",
-	"WALCK",
 	"RUN",
+	"WALCK",
 	"JUMP",
 	"FALL",
 	"LEDGE_GRAB"
@@ -66,13 +66,15 @@ func _physics_process(delta: float) -> void:
 
 	# Comprobar si esta aterrizando y cambiar estado
 	if is_on_floor() and state != states.LEDGE_GRAB:
-		if velocity.x != 0:
+		if velocity.x != 0 and Input.is_action_pressed("sprint"):
 			state = states.RUN
+		if velocity.x != 0:
+			state = states.WALCK
 		if velocity.x == 0:
 			state = states.IDLE
 
 	# comprobar si esta cayendo
-	if !is_on_floor() and state in [states.IDLE, states.RUN]:
+	if !is_on_floor() and state in [states.IDLE, states.RUN, states.WALCK]:
 		state = states.FALL
 
 	# Movimientos en el aire
@@ -83,7 +85,8 @@ func _physics_process(delta: float) -> void:
 		apply_air_resistance(input_axis, delta)
 
 	# Movimientos de estado en la tierra
-	if state in [states.IDLE, states.RUN]:
+	
+	if state in [states.IDLE, states.WALCK, states.RUN]:
 		handle_jump_input()
 		handle_acceleration(input_axis, delta)
 		apply_friction(input_axis, delta)
@@ -93,6 +96,8 @@ func _physics_process(delta: float) -> void:
 	match state:
 		states.IDLE:
 			anim.play("idle")
+		states.WALCK:
+			anim.play("walck")
 		states.RUN:
 			anim.play("run")
 		states.JUMP:
@@ -132,8 +137,10 @@ func apply_gravity(delta: float) -> void:
 func handle_acceleration(input_axis, delta) -> void:
 	# condicion de sprint usando la aceleracion
 	if input_axis == 1 and Input.is_action_pressed("sprint"):
+		state = states.RUN
 		velocity.x = move_toward(velocity.x, run_speed * input_axis, acceleration * delta * 4)
 	elif input_axis == -1 and Input.is_action_pressed("sprint"):
+		state = states.RUN
 		velocity.x = move_toward(velocity.x, run_speed * input_axis, acceleration * delta * 4)
 	
 	# movimiento utilizando la aceleracion
