@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Ledge Grab Tutorial"
-run/main_scene="uid://n055c6m7kbre"
+config/name="When Game"
+run/main_scene="uid://b7de3yn33v8yw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

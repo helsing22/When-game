@@ -1,6 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://n055c6m7kbre"]
+[gd_scene load_steps=9 format=3 uid="uid://n055c6m7kbre"]
 
 [ext_resource type="Script" uid="uid://cbbx00b5nh31f" path="res://Scripts/player.gd" id="1_pis21"]
+[ext_resource type="Texture2D" uid="uid://bxhy7os5v8ifi" path="res://Art/Character.png" id="2_g2els"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 30, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dt7fs"]
 animations = [{
@@ -9,7 +14,10 @@ animations = [{
 "name": &"fall",
 "speed": 8.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 7.0
@@ -31,10 +39,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwt75"]
-size = Vector2(16, 29)
+size = Vector2(18, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dr75"]
-size = Vector2(18, 0)
+size = Vector2(35, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xiaou"]
 size = Vector2(20, 8)
@@ -46,14 +54,17 @@ size = Vector2(18, 4)
 floor_snap_length = 5.0
 platform_on_leave = 1
 script = ExtResource("1_pis21")
+movement_speed = 100.0
+run_speed = 200.0
+jump_velocity = -450.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -21)
+position = Vector2(0, -25)
 sprite_frames = SubResource("SpriteFrames_dt7fs")
-animation = &"run"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -14.5)
+position = Vector2(-1, -24)
 shape = SubResource("RectangleShape2D_vwt75")
 
 [node name="CoyoteTimer" type="Timer" parent="."]
@@ -67,22 +78,24 @@ wait_time = 0.15
 one_shot = true
 
 [node name="LedgeGrab" type="CollisionShape2D" parent="."]
-position = Vector2(0, -34)
+position = Vector2(-2.5, -52)
 shape = SubResource("RectangleShape2D_0dr75")
 
 [node name="WallCheck" type="ShapeCast2D" parent="."]
-visible = false
-position = Vector2(0, -25)
+position = Vector2(-1, -44)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xiaou")
-target_position = Vector2(0, 16)
+target_position = Vector2(0, 39)
 
 [node name="FloorCheck" type="RayCast2D" parent="."]
-visible = false
-position = Vector2(0, -16)
+position = Vector2(0, -13)
 target_position = Vector2(0, 24)
 
 [node name="TopCheck" type="ShapeCast2D" parent="."]
-visible = false
-position = Vector2(0, -36)
+position = Vector2(-4, -52)
+scale = Vector2(2.18063, 0.485554)
 shape = SubResource("RectangleShape2D_n8734")
 target_position = Vector2(0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.485, 2.485)

@@ -150,6 +150,11 @@ func apply_friction(input_axis, delta) -> void:
 
 func handle_air_acceleration(input_axis, delta) -> void:
 	#mismo caso de la aceleracion : la aceleracion es mas veloz cuando te das vuelta
+	if input_axis == 1 and Input.is_action_pressed("sprint"):
+		velocity.x = move_toward(velocity.x, run_speed * input_axis, air_acceleration * delta * 4)
+	elif input_axis == -1 and Input.is_action_pressed("sprint"):
+		velocity.x = move_toward(velocity.x, run_speed * input_axis, air_acceleration * delta * 4)
+	
 	if input_axis == 1 and velocity.x < 1:
 		velocity.x = move_toward(velocity.x, movement_speed * input_axis,air_acceleration * delta * 4)
 	elif input_axis == -1 and velocity.x > 1:
