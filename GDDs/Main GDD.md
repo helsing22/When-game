@@ -55,10 +55,11 @@ Inicialmente, el objetivo del juego no está claro. Solo a través de la explora
 
 Equipo actual:
 
-Desarrolladores: 3
+Desarrolladores: 4
  Hels
  Mayko2
  William
+ Dian
  
 Guión: 1
  Dozarou
