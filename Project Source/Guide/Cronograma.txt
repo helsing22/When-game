@@ -36,3 +36,17 @@ Second edit: "Furokawa" {
 	
 	-With love Furokawa
 }
+
+Third edit : "Furokawa" {
+	Date : 20/3/2025
+	Songs listened : {
+		I don't had time this time
+	}
+	So i worked like 3 or 4 hour tooday and made this advanced metroidvania style character controller
+	you can grab on edges, jump on walls, slide on walls and vault edges, anyways, the most important
+	part, it's slightly finished, i will work on the camera if u want
+	
+	Further Documentation :
+		All the pieces of code that u can see here needs to be refactorized in order to preserve structure
+		i can do it myself, but i let u know
+}

@@ -159,12 +159,10 @@ hframes = 6
 position = Vector2(0, 34)
 shape = SubResource("RectangleShape2D_1gwrj")
 
-[node name="InputDetection_Component" type="Node" parent="." node_paths=PackedStringArray("collisionCheck_Head", "collisionCheck_Body", "collisionCheck_Foot", "grabTimer")]
+[node name="InputDetection_Component" type="Node" parent="." node_paths=PackedStringArray("collisionCheck_Head", "collisionCheck_Body")]
 script = ExtResource("3_7g2pi")
 collisionCheck_Head = NodePath("../CollisionCheck_Head")
 collisionCheck_Body = NodePath("../CollisionCheck_Body")
-collisionCheck_Foot = NodePath("../CollisionCheck_Foot")
-grabTimer = NodePath("../grabTimer")
 metadata/_custom_type_script = "uid://c5b4ggmae7h6t"
 
 [node name="PlayerStateManager_Component" type="Node" parent="." node_paths=PackedStringArray("targetEntity", "inputDetection_Component", "targetAnimation_Tree")]
@@ -194,10 +192,3 @@ max_results = 1
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_mikdv")
 target_position = Vector2(0, 45)
-
-[node name="CollisionCheck_Foot" type="RayCast2D" parent="."]
-target_position = Vector2(0, 65)
-
-[node name="grabTimer" type="Timer" parent="."]
-
-[connection signal="timeout" from="grabTimer" to="InputDetection_Component" method="on_GrabTimeOut"]

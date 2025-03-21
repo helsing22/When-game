@@ -11,7 +11,8 @@ size = Vector2(130, 130)
 [node name="WorldNode_Main" type="Node" parent="."]
 
 [node name="PlayerCharacter_Main" parent="WorldNode_Main" instance=ExtResource("1_n7ce1")]
-movementSpeed = 150.0
+
+[node name="Camera2D" type="Camera2D" parent="WorldNode_Main/PlayerCharacter_Main"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="WorldNode_Main"]
 position = Vector2(0, 230)
@@ -20,6 +21,33 @@ position = Vector2(0, 230)
 texture = ExtResource("2_hl2sg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D"]
+shape = SubResource("RectangleShape2D_v8ro6")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="WorldNode_Main"]
+position = Vector2(-132, 230)
+
+[node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D8"]
+texture = ExtResource("2_hl2sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D8"]
+shape = SubResource("RectangleShape2D_v8ro6")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="WorldNode_Main"]
+position = Vector2(-98, 101)
+
+[node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D9"]
+texture = ExtResource("2_hl2sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D9"]
+shape = SubResource("RectangleShape2D_v8ro6")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="WorldNode_Main"]
+position = Vector2(-98, -28)
+
+[node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D10"]
+texture = ExtResource("2_hl2sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D10"]
 shape = SubResource("RectangleShape2D_v8ro6")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="WorldNode_Main"]
@@ -32,10 +60,46 @@ texture = ExtResource("2_hl2sg")
 shape = SubResource("RectangleShape2D_v8ro6")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="WorldNode_Main"]
-position = Vector2(260, 146)
+position = Vector2(260, 230)
 
 [node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D3"]
 texture = ExtResource("2_hl2sg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_v8ro6")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="WorldNode_Main"]
+position = Vector2(389, 230)
+
+[node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D4"]
+texture = ExtResource("2_hl2sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_v8ro6")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="WorldNode_Main"]
+position = Vector2(260, 84)
+
+[node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D5"]
+texture = ExtResource("2_hl2sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D5"]
+shape = SubResource("RectangleShape2D_v8ro6")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="WorldNode_Main"]
+position = Vector2(260, -47)
+
+[node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D6"]
+texture = ExtResource("2_hl2sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D6"]
+shape = SubResource("RectangleShape2D_v8ro6")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="WorldNode_Main"]
+position = Vector2(130, 84)
+
+[node name="Icon" type="Sprite2D" parent="WorldNode_Main/StaticBody2D7"]
+texture = ExtResource("2_hl2sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldNode_Main/StaticBody2D7"]
 shape = SubResource("RectangleShape2D_v8ro6")

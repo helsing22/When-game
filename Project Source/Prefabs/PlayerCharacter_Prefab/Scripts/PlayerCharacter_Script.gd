@@ -33,7 +33,7 @@ func _physics_process(delta : float) -> void:
 	if inputDetection_Component == null:
 		printerr("The InputDetection Component is NULL!!!")
 		return
-	
+
 	if PlayerCharacter_Sprite != null && inputDetection_Component.get_horizontal() != 0:
 		PlayerCharacter_Sprite.flip_h = inputDetection_Component.get_horizontal() < 0
 		
