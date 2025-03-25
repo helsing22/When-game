@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyl2kibkkgycf"]
+
+[ext_resource type="PackedScene" uid="uid://qrjca61e5udw" path="res://Prefabs/PlayerCharacter_Prefab/PlayerCharacter_Scene.tscn" id="1_n7ce1"]
+[ext_resource type="PackedScene" uid="uid://clqoix3ch37e7" path="res://Prefabs/DEBUG_GodotCube/GodotCube.tscn" id="2_hl2sg"]
+
+[node name="RootNode_Main" type="Node"]
+
+[node name="WorldNode_Main" type="Node" parent="."]
+
+[node name="PlayerCharacter_Main" parent="WorldNode_Main" instance=ExtResource("1_n7ce1")]
+position = Vector2(-55, -268)
+
+[node name="Camera2D" type="Camera2D" parent="WorldNode_Main/PlayerCharacter_Main"]
+zoom = Vector2(2, 2)
+
+[node name="GodotCube" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(0, 103)
+
+[node name="GodotCube2" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(128, 103)
+
+[node name="GodotCube3" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(-128, 103)
+
+[node name="GodotCube4" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(-256, -25)
+
+[node name="GodotCube5" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(-44, -89)
+
+[node name="GodotCube8" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(285, -44)
+
+[node name="GodotCube6" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(-64, -44)
+scale = Vector2(1, 0.08)
+
+[node name="GodotCube7" parent="WorldNode_Main" instance=ExtResource("2_hl2sg")]
+position = Vector2(170, -39)
+scale = Vector2(1, 0.08)
