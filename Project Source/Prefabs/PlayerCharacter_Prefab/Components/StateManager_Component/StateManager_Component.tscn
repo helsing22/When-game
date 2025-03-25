@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://csgl6kefubu80"]
-
-[ext_resource type="Script" uid="uid://d3iin26wacdfw" path="res://Prefabs/PlayerCharacter_Prefab/Components/StateManager_Component/Scripts/StateManager_Component.gd" id="1_113aq"]
-
-[node name="StateManagerScene" type="Node"]
-script = ExtResource("1_113aq")
