@@ -1,0 +1,174 @@
+[gd_scene load_steps=13 format=3 uid="uid://qrjca61e5udw"]
+
+[ext_resource type="Script" uid="uid://do0mc2pqvfqhh" path="res://Prefabs/PlayerCharacter_Prefab/Scripts/PlayerCharacter_Script.gd" id="1_1gwrj"]
+[ext_resource type="Texture2D" uid="uid://cqs3kwl03m532" path="res://Prefabs/PlayerCharacter_Prefab/Graphics/Idle.png" id="1_a8ii2"]
+[ext_resource type="Script" uid="uid://c5b4ggmae7h6t" path="res://Prefabs/PlayerCharacter_Prefab/Components/InputDetection_Component/Scripts/InputDetection_Script.gd" id="3_7g2pi"]
+[ext_resource type="Script" uid="uid://d3iin26wacdfw" path="res://Prefabs/PlayerCharacter_Prefab/Components/StateManager_Component/Scripts/StateManager_Component.gd" id="4_5w1aj"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://f2liyot072c8" path="res://Prefabs/PlayerCharacter_Prefab/Animations/PlayerAnimation_Controller.tres" id="5_8tjgx"]
+[ext_resource type="AnimationNodeStateMachinePlayback" uid="uid://0busihlc8k5j" path="res://Prefabs/PlayerCharacter_Prefab/Animations/PlayerAnimation_Playback.tres" id="5_mikdv"]
+[ext_resource type="Texture2D" uid="uid://c1dg6jtoaxv1s" path="res://Prefabs/PlayerCharacter_Prefab/Graphics/Run.png" id="6_8tjgx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gwrj"]
+size = Vector2(20, 60)
+
+[sub_resource type="Animation" id="Animation_5w1aj"]
+resource_name = "Player_Idle"
+length = 0.833337
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCharacter_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_a8ii2")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerCharacter_Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerCharacter_Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4, 0.533333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_8tjgx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCharacter_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_a8ii2")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerCharacter_Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerCharacter_Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mikdv"]
+resource_name = "Player_Run"
+length = 0.96667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCharacter_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_8tjgx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerCharacter_Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerCharacter_Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mikdv"]
+_data = {
+&"Player_Idle": SubResource("Animation_5w1aj"),
+&"Player_Run": SubResource("Animation_mikdv"),
+&"RESET": SubResource("Animation_8tjgx")
+}
+
+[node name="PlayerCharacter_Main" type="CharacterBody2D" node_paths=PackedStringArray("PlayerCharacter_Sprite", "inputDetection_Component")]
+script = ExtResource("1_1gwrj")
+PlayerCharacter_Sprite = NodePath("PlayerCharacter_Sprite")
+inputDetection_Component = NodePath("InputDetection_Component")
+
+[node name="PlayerCharacter_Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_a8ii2")
+hframes = 6
+
+[node name="PlayerCharacter_Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, 34)
+shape = SubResource("RectangleShape2D_1gwrj")
+
+[node name="InputDetection_Component" type="Node" parent="."]
+script = ExtResource("3_7g2pi")
+metadata/_custom_type_script = "uid://c5b4ggmae7h6t"
+
+[node name="PlayerStateManager_Comexport" type="Node" parent="." node_paths=PackedStringArray("targetEntity", "targetAnimation_Tree")]
+script = ExtResource("4_5w1aj")
+animationPrefix = "Player_"
+targetEntity = NodePath("..")
+targetAnimation_Tree = NodePath("../PlayerAnimation_Tree")
+targetStateMachine_Playback = ExtResource("5_mikdv")
+metadata/_custom_type_script = "uid://d3iin26wacdfw"
+
+[node name="PlayerAnimation_Tree" type="AnimationTree" parent="."]
+tree_root = ExtResource("5_8tjgx")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mikdv")
+}

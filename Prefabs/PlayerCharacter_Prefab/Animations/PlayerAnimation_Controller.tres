@@ -1,0 +1,47 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=14 format=3 uid="uid://f2liyot072c8"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ghrf6"]
+animation = &"Player_EdgeGrab"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k1bws"]
+animation = &"Player_Fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j7o5e"]
+animation = &"Player_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_khqvo"]
+animation = &"Player_Jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lwe2b"]
+animation = &"Player_Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k1bws"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_khqvo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ghrf6"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eyega"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e5hno"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lgh5y"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fslek"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bma2o"]
+
+[resource]
+states/Player_EdgeGrab/node = SubResource("AnimationNodeAnimation_ghrf6")
+states/Player_EdgeGrab/position = Vector2(329.778, -28.963)
+states/Player_Fall/node = SubResource("AnimationNodeAnimation_k1bws")
+states/Player_Fall/position = Vector2(402.667, 34)
+states/Player_Idle/node = SubResource("AnimationNodeAnimation_j7o5e")
+states/Player_Idle/position = Vector2(330.667, 99.3333)
+states/Player_Jump/node = SubResource("AnimationNodeAnimation_khqvo")
+states/Player_Jump/position = Vector2(248, 35.3333)
+states/Player_Run/node = SubResource("AnimationNodeAnimation_lwe2b")
+states/Player_Run/position = Vector2(329.778, 195.333)
+transitions = ["Start", "Player_Idle", SubResource("AnimationNodeStateMachineTransition_k1bws"), "Player_Idle", "Player_Run", SubResource("AnimationNodeStateMachineTransition_khqvo"), "Player_Run", "Player_Idle", SubResource("AnimationNodeStateMachineTransition_ghrf6"), "Player_Idle", "Player_Jump", SubResource("AnimationNodeStateMachineTransition_eyega"), "Player_Jump", "Player_Fall", SubResource("AnimationNodeStateMachineTransition_e5hno"), "Player_Fall", "Player_Idle", SubResource("AnimationNodeStateMachineTransition_lgh5y"), "Player_Fall", "Player_EdgeGrab", SubResource("AnimationNodeStateMachineTransition_fslek"), "Player_Jump", "Player_EdgeGrab", SubResource("AnimationNodeStateMachineTransition_bma2o")]
+graph_offset = Vector2(-61, -97)
