@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://qrjca61e5udw"]
+[gd_scene load_steps=22 format=3 uid="uid://qrjca61e5udw"]
 
 [ext_resource type="Script" uid="uid://do0mc2pqvfqhh" path="res://Prefabs/PlayerCharacter_Prefab/Scripts/PlayerCharacter_Script.gd" id="1_1gwrj"]
 [ext_resource type="Texture2D" uid="uid://dv4hlwxxrt0sv" path="res://Prefabs/PlayerCharacter_Prefab/Graphics/character play idle.png" id="2_8tjgx"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d110kokvf6lny" path="res://Prefabs/PlayerCharacter_Prefab/Graphics/character play jump.png" id="7_eshu6"]
 [ext_resource type="Texture2D" uid="uid://d306y8n6yj16b" path="res://Prefabs/PlayerCharacter_Prefab/Graphics/character play fall.png" id="8_sluhj"]
 [ext_resource type="Texture2D" uid="uid://c61vrks3rojf1" path="res://Prefabs/PlayerCharacter_Prefab/Graphics/character play edge grab.png" id="9_sluhj"]
+[ext_resource type="Texture2D" uid="uid://ck8yw4w0t20y" path="res://Prefabs/PlayerCharacter_Prefab/Graphics/character play walckpng.png" id="10_lv8kl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gwrj"]
 size = Vector2(13, 35)
@@ -254,6 +255,48 @@ tracks/2/keys = {
 "values": [1]
 }
 
+[sub_resource type="Animation" id="Animation_dlsk5"]
+resource_name = "Player_Walck"
+length = 0.3635
+loop_mode = 1
+step = 0.04
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCharacter_Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_lv8kl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerCharacter_Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerCharacter_Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0719874, 0.143975, 0.219403, 0.293893),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5ixj"]
 _data = {
 &"Player_EdgeGrab": SubResource("Animation_prhbb"),
@@ -261,6 +304,7 @@ _data = {
 &"Player_Idle": SubResource("Animation_eshu6"),
 &"Player_Jump": SubResource("Animation_a5ixj"),
 &"Player_Run": SubResource("Animation_lv8kl"),
+&"Player_Walck": SubResource("Animation_dlsk5"),
 &"RESET": SubResource("Animation_sluhj")
 }
 

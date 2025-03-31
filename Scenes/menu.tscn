@@ -1,0 +1,152 @@
+[gd_scene load_steps=13 format=3 uid="uid://comnvd0m3b14w"]
+
+[ext_resource type="Script" uid="uid://xr45ipm862y0" path="res://Scenes/menu.gd" id="1_q3rjx"]
+[ext_resource type="Script" uid="uid://bxafffgduq1du" path="res://Scenes/parallax_layer.gd" id="2_g8i7c"]
+[ext_resource type="Texture2D" uid="uid://bo6fhh5wvlads" path="res://Assets (Unsorted)/BG/2.png" id="2_q3rjx"]
+[ext_resource type="Texture2D" uid="uid://d15ogrsjsexc8" path="res://Assets (Unsorted)/BG/Clouds/1.png" id="2_rfqti"]
+[ext_resource type="Texture2D" uid="uid://5opy73hi7ame" path="res://Assets (Unsorted)/BG/3.png" id="3_6swd7"]
+[ext_resource type="Texture2D" uid="uid://bqo54e2q1k8cm" path="res://Assets (Unsorted)/BG/Clouds/2.png" id="3_g8i7c"]
+[ext_resource type="Texture2D" uid="uid://brs5ukq5in6gy" path="res://Assets (Unsorted)/BG/Clouds/5.png" id="4_23t3j"]
+[ext_resource type="Texture2D" uid="uid://dthhrossygfoq" path="res://Assets (Unsorted)/BG/Clouds/4.png" id="5_8ph6h"]
+[ext_resource type="Texture2D" uid="uid://pb2mthdir3ys" path="res://Assets (Unsorted)/BG/4.png" id="5_rfqti"]
+[ext_resource type="Texture2D" uid="uid://ceh27o30imqb5" path="res://Assets (Unsorted)/BG/Clouds/6.png" id="6_5ti5v"]
+[ext_resource type="Texture2D" uid="uid://kmhgqlt4obcn" path="res://Assets (Unsorted)/BG/5.png" id="6_g8i7c"]
+[ext_resource type="Texture2D" uid="uid://bc5x81m5q2dk5" path="res://Assets (Unsorted)/BG/7.png" id="7_23t3j"]
+
+[node name="menu" type="Node"]
+script = ExtResource("1_q3rjx")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2.85, 2.85)
+motion_mirroring = Vector2(1509.01, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+self_modulate = Color(1, 0.794667, 0.72, 1)
+position = Vector2(460, -149)
+scale = Vector2(2.61995, 2.92949)
+texture = ExtResource("2_rfqti")
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2.085, 2.085)
+motion_mirroring = Vector2(1509.01, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer11"]
+position = Vector2(460, -149)
+scale = Vector2(2.61995, 2.92949)
+texture = ExtResource("3_g8i7c")
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.47, 1.47)
+motion_mirroring = Vector2(1509.01, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10"]
+position = Vector2(460, -149)
+scale = Vector2(2.61995, 2.92949)
+texture = ExtResource("4_23t3j")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.18, 1.18)
+motion_mirroring = Vector2(1509.01, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2(460, -149)
+scale = Vector2(2.61995, 2.92949)
+texture = ExtResource("5_8ph6h")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1509.01, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8"]
+position = Vector2(460, -149)
+scale = Vector2(2.61995, 2.92949)
+texture = ExtResource("4_23t3j")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.875, 0.875)
+motion_mirroring = Vector2(1509.01, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
+position = Vector2(460, -149)
+scale = Vector2(2.61995, 2.92949)
+texture = ExtResource("6_5ti5v")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.705, 0.705)
+motion_mirroring = Vector2(1740, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(564.766, 318.842)
+scale = Vector2(2.99748, 4.6548)
+texture = ExtResource("2_q3rjx")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.615, 0.615)
+motion_mirroring = Vector2(1740, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(564.766, 318.842)
+scale = Vector2(3.10352, 2.783)
+texture = ExtResource("3_6swd7")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.49, 0.49)
+motion_mirroring = Vector2(1540, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(564.766, 318.842)
+scale = Vector2(2.72065, 2.04912)
+texture = ExtResource("5_rfqti")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1540, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(564.766, 318.842)
+scale = Vector2(2.77965, 2.8352)
+texture = ExtResource("6_g8i7c")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(632.93, 0)
+script = ExtResource("2_g8i7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2(189, 498)
+scale = Vector2(1.10976, 1.40141)
+texture = ExtResource("7_23t3j")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+texture_filter = 5
+offset_left = 14.0
+offset_top = 531.0
+offset_right = 213.0
+offset_bottom = 618.0
+theme_override_constants/separation = 25
+vertical = true
+
+[node name="Jugar" type="Button" parent="BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.376471, 0, 0, 0.686275)
+theme_override_colors/font_hover_color = Color(1, 0.720017, 0.686211, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Play"
+flat = true
+
+[node name="salir" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "Exit"
+flat = true
+
+[connection signal="pressed" from="BoxContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="BoxContainer/salir" to="." method="_on_salir_pressed"]
